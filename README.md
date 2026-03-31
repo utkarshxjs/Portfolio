@@ -1,2 +1,2 @@
 # Portfolio
-This is a Github Repo for my Portfolio Site
+My professional web development portfolio hosted on GitHub Pages.
