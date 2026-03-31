@@ -41,44 +41,42 @@
 
   <!-- PROJECTS -->
   <section id="projects" class="section">
-  <h2 class="section-title">Projects</h2>
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
 
-  <div class="projects-grid">
+      <div class="project-card">
+        <h3>TaskFlow – Smart To-Do App</h3>
+        <p>
+          A clean task management app with local storage support, 
+          priority tagging, and deadline filtering.
+        </p>
+        <span class="project-stack">HTML • CSS • JavaScript</span>
+      </div>
 
-    <div class="project-card">
-      <h3>TaskFlow – Smart To-Do App</h3>
-      <p>
-        A clean task management app with local storage support, 
-        priority tagging, and deadline filtering.
-      </p>
-      <span class="project-stack">HTML • CSS • JavaScript</span>
+      <div class="project-card">
+        <h3>FinTrack – Personal Finance Tracker</h3>
+        <p>
+          Expense tracking dashboard with income/expense breakdown, 
+          monthly insights, and category-based filtering.
+        </p>
+        <span class="project-stack">JavaScript • Chart Logic • Local Storage</span>
+      </div>
+
+      <div class="project-card">
+        <h3>PredictAI – Fundamental Market Predictor</h3>
+        <p>
+          A fundamental data-driven predictive modeling concept 
+          that analyzes company metrics to estimate long-term trends.
+        </p>
+        <span class="project-stack">JavaScript • Data Modeling • API Ready</span>
+      </div>
+
     </div>
-
-    <div class="project-card">
-      <h3>FinTrack – Personal Finance Tracker</h3>
-      <p>
-        Expense tracking dashboard with income/expense breakdown, 
-        monthly insights, and category-based filtering.
-      </p>
-      <span class="project-stack">JavaScript • Chart Logic • Local Storage</span>
-    </div>
-
-    <div class="project-card">
-      <h3>PredictAI – Fundamental Market Predictor</h3>
-      <p>
-        A fundamental data-driven predictive modeling concept 
-        that analyzes company metrics to estimate long-term trends.
-      </p>
-      <span class="project-stack">JavaScript • Data Modeling • API Ready</span>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- SKILLS -->
   <section id="skills" class="skills reveal">
     <h2 class="section-title">Tech Stack</h2>
-
     <div class="stack-wrapper">
 
       <div class="stack-group">
@@ -117,71 +115,61 @@
 
     </div>
   </section>
-<!-- CONTACT -->
-<section id="contact" class="contact reveal">
-  <h2 class="section-title">Contact Me</h2>
-  <form id="contactForm">
-    <input type="text" id="honeypot" name="honeypot" style="display:none;" tabindex="-1" autocomplete="off" />
-    <input type="text" id="name" name="name" placeholder="Your Name" required />
-    <input type="email" id="email" name="email" placeholder="Your Email" required />
-    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-    <button type="submit" id="submitBtn">Send Message</button>
-    <p id="formStatus"></p>
-  </form>
 
-  <script>
-    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwABbq0PbuP2Asi6AOks_sZwya5FX_6WYUjywbaMw8XWYeN9zyUs5X0sMozusFRpW6P/exec";
+  <!-- CONTACT -->
+  <section id="contact" class="contact reveal">
+    <h2 class="section-title">Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="honeypot" name="honeypot" style="display:none;" tabindex="-1" autocomplete="off" />
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" id="submitBtn">Send Message</button>
+      <p id="formStatus"></p>
+    </form>
 
-    document.getElementById("contactForm").addEventListener("submit", async function (e) {
-      e.preventDefault();
+    <script>
+      const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwABbq0PbuP2Asi6AOks_sZwya5FX_6WYUjywbaMw8XWYeN9zyUs5X0sMozusFRpW6P/exec";
 
-      const btn = document.getElementById("submitBtn");
-      const status = document.getElementById("formStatus");
+      document.getElementById("contactForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-      btn.disabled = true;
-      btn.textContent = "Sending...";
-      status.textContent = "";
+        const btn = document.getElementById("submitBtn");
+        const status = document.getElementById("formStatus");
 
-      const payload = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-        honeypot: document.getElementById("honeypot").value,
-      };
+        btn.disabled = true;
+        btn.textContent = "Sending...";
+        status.textContent = "";
 
-      try {
-        await fetch(APPS_SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
+        const payload = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+          honeypot: document.getElementById("honeypot").value,
+        };
 
-        status.textContent = "✅ Message sent! I'll get back to you soon.";
-        status.style.color = "green";
-        document.getElementById("contactForm").reset();
+        try {
+          await fetch(APPS_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
 
-      } catch (error) {
-        status.textContent = "❌ Something went wrong. Please try again.";
-        status.style.color = "red";
-      } finally {
-        btn.disabled = false;
-        btn.textContent = "Send Message";
-      }
-    });
-  </script>
-</section>
-```
+          status.textContent = "✅ Message sent! I'll get back to you soon.";
+          status.style.color = "green";
+          document.getElementById("contactForm").reset();
 
----
-
-## What Was Wrong
-
-The problem was that you accidentally copy-pasted my **markdown instructions** (the ` ```javascript ` code blocks and explanation text) directly into your HTML file. So your script had broken text like:
-```
-Status
-  document.getElementById...
-
+        } catch (error) {
+          status.textContent = "❌ Something went wrong. Please try again.";
+          status.style.color = "red";
+        } finally {
+          btn.disabled = false;
+          btn.textContent = "Send Message";
+        }
+      });
+    </script>
+  </section>
 
   <footer>
     <p>© 2026 Utkarsh Mishra. Built with focus.</p>
