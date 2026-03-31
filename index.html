@@ -122,6 +122,8 @@
   <section id="contact" class="contact reveal">
     <h2 class="section-title">Contact Me</h2>
     <form id="contactForm">
+      <!-- Honeypot field - hidden from real users -->
+<input type="text" id="honeypot" name="honeypot" style="display:none;" tabindex="-1" autocomplete="off" />
   <input type="text" id="name" name="name" placeholder="Your Name" required />
   <input type="email" id="email" name="email" placeholder="Your Email" required />
   <textarea id="message" name="message" placeholder="Your Message" required></textarea>
@@ -131,7 +133,21 @@
 
 <script>
   const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwXy-UDPuZ0Rttjs5fdFoQ9clwuPOgGittJMxWiy9iNOFl6I_8WDpBGUXKbFLzsXmP8/exec"; // 👈 paste your URL here
+  const payload = {
+  name: document.getElementById("name").value,
+  email: document.getElementById("email").value,
+  message: document.getElementById("message").value,
+  honeypot: document.getElementById("honeypot").value, // 👈 add this
+};
+```
 
+---
+
+## Also Add Column E Header in Your Sheet
+
+In your Google Sheet, add in cell **E1**:
+```
+Status
   document.getElementById("contactForm").addEventListener("submit", async function (e) {
     e.preventDefault();
 
