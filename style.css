@@ -331,6 +331,64 @@ section {
   letter-spacing: 0.3px;
 }
 
+/* ─── PARALLEL IDENTITY BUREAU CARD ─── */
+.pib-card {
+  border-color: rgba(167, 139, 250, 0.15);
+}
+
+.pib-card:hover {
+  border-color: rgba(167, 139, 250, 0.35);
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.07);
+}
+
+.pib-visual {
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1030 100%);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.1);
+}
+
+.orb-pib1 {
+  width: 80px; height: 80px;
+  background: #a78bfa;
+  top: -20px; right: 10%;
+  animation: drift 7s ease-in-out infinite alternate;
+}
+
+.orb-pib2 {
+  width: 55px; height: 55px;
+  background: #7c3aed;
+  top: 15px; left: 15%;
+  animation: drift 5s ease-in-out infinite alternate-reverse;
+}
+
+.pib-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.pib-label {
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.pib-tag {
+  border-color: rgba(167, 139, 250, 0.25);
+  color: #7c6aaa;
+}
+
+.pib-stack {
+  color: #a78bfa !important;
+}
+
 /* STACK */
 .stack-group {
   margin-bottom: 40px;
