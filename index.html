@@ -48,10 +48,11 @@
     <section id="projects" class="section">
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
+
         <!-- PROJECT 1: FinTrack (Live) -->
         <a
           class="project-card live fintrack-card"
-          href="https://fin-track-one-green.vercel.app/"
+          href="https://fin-track-rho-teal.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -86,7 +87,7 @@
           <span class="project-stack">JavaScript • Chart Logic • Local Storage</span>
         </a>
 
-        <!-- PROJECT 2: Parallel Identity Bureau (Live) -->
+        <!-- PROJECT 2: ID-2099 (Live) -->
         <a class="project-card live pib-card" href="https://id-2099.vercel.app/" target="_blank" rel="noopener noreferrer">
           <div class="cs-visual pib-visual">
             <div class="cs-grid"></div>
@@ -100,42 +101,11 @@
                 width="40"
                 height="40"
               >
-                <ellipse
-                  cx="24"
-                  cy="24"
-                  rx="16"
-                  ry="16"
-                  stroke="#a78bfa"
-                  stroke-width="2"
-                  stroke-dasharray="4 2"
-                />
-                <ellipse
-                  cx="24"
-                  cy="24"
-                  rx="9"
-                  ry="16"
-                  stroke="#a78bfa"
-                  stroke-width="1.5"
-                  stroke-dasharray="3 2"
-                />
-                <line
-                  x1="8"
-                  y1="24"
-                  x2="40"
-                  y2="24"
-                  stroke="#a78bfa"
-                  stroke-width="1.5"
-                  stroke-dasharray="3 2"
-                />
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="3"
-                  fill="rgba(167,139,250,0.3)"
-                  stroke="#a78bfa"
-                  stroke-width="2"
-                />
-                <circle cx="24" cy="24" r="1.2" fill="#a78bfa" />
+                <ellipse cx="24" cy="24" rx="16" ry="16" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 2"/>
+                <ellipse cx="24" cy="24" rx="9" ry="16" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <line x1="8" y1="24" x2="40" y2="24" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <circle cx="24" cy="24" r="3" fill="rgba(167,139,250,0.3)" stroke="#a78bfa" stroke-width="2"/>
+                <circle cx="24" cy="24" r="1.2" fill="#a78bfa"/>
               </svg>
             </div>
           </div>
@@ -153,57 +123,50 @@
             <span class="cs-tag pib-tag">html-to-image</span>
             <span class="cs-tag pib-tag">Procedural Gen</span>
           </div>
-          <span class="project-stack pib-stack"
-            >React • CSS Shaders • Generative UI</span
-          >
+          <span class="project-stack pib-stack">React • CSS Shaders • Generative UI</span>
         </a>
 
-        <!-- PROJECT 3: Zero-Trust API Gateway (Coming Soon) -->
-        <div class="project-card coming-soon">
-          <div class="cs-visual">
+        <!-- PROJECT 3: Snip (Live) -->
+        <a
+          class="project-card live snip-card"
+          href="https://snip-hg3wb2k1g-utkarshxjs-projects.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="cs-visual snip-visual">
             <div class="cs-grid"></div>
-            <div class="cs-orb orb1"></div>
-            <div class="cs-orb orb2"></div>
-            <div class="shield-icon">
-              <svg
-                viewBox="0 0 48 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-              >
-                <path
-                  d="M24 4L6 12V24C6 33.9 14.1 43.2 24 46C33.9 43.2 42 33.9 42 24V12L24 4Z"
-                  stroke="#38bdf8"
-                  stroke-width="2.5"
-                  stroke-linejoin="round"
-                  fill="rgba(56,189,248,0.08)"
-                />
-                <path
-                  d="M17 24L22 29L31 19"
-                  stroke="#38bdf8"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+            <div class="cs-orb orb-snip1"></div>
+            <div class="cs-orb orb-snip2"></div>
+            <div class="snip-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                <!-- Chain link left -->
+                <path d="M18 20H14a6 6 0 0 0 0 12h4" stroke="#7cfc9f" stroke-width="2" stroke-linecap="round"/>
+                <!-- Chain link right -->
+                <path d="M30 20h4a6 6 0 0 1 0 12h-4" stroke="#7cfc9f" stroke-width="2" stroke-linecap="round"/>
+                <!-- Middle connector -->
+                <line x1="19" y1="26" x2="29" y2="26" stroke="#7cfc9f" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 2"/>
+                <!-- Scissor snip mark -->
+                <line x1="28" y1="16" x2="36" y2="10" stroke="#3dffd0" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="27" cy="17" r="2" fill="rgba(61,255,208,0.25)" stroke="#3dffd0" stroke-width="1.5"/>
               </svg>
             </div>
           </div>
-          <div class="cs-label">Coming Soon</div>
-          <h3>Zero-Trust API Gateway</h3>
+          <div class="live-badge">● Live</div>
+          <h3>Snip</h3>
           <p>
-            A security-first gateway with JWT rotation, refresh tokens, IP-based
-            rate limiting, and geo-anomaly detection — flags logins across
-            impossible distances and forces re-auth.
+            A clean, fast URL shortener with QR code generation, click analytics,
+            expiry dates, and custom aliases. Built with a terminal-inspired UI
+            that keeps things minimal but packed with utility under the hood.
           </p>
           <div class="cs-tags">
-            <span class="cs-tag">JWT Auth</span>
-            <span class="cs-tag">Rate Limiting</span>
-            <span class="cs-tag">IP Whitelisting</span>
-            <span class="cs-tag">Node.js</span>
+            <span class="cs-tag snip-tag">URL Shortener</span>
+            <span class="cs-tag snip-tag">QR Codes</span>
+            <span class="cs-tag snip-tag">Analytics</span>
+            <span class="cs-tag snip-tag">React</span>
           </div>
-          <span class="project-stack">Node.js • Express • Security • APIs</span>
-        </div>
+          <span class="project-stack snip-stack">React • Local Storage • QRCode.js</span>
+        </a>
+
       </div>
     </section>
 
@@ -226,11 +189,11 @@
         <div class="stack-group">
           <h3>Learning & Improving</h3>
           <div class="stack-items active">
+            <span>React</span>
             <span>Node.js</span>
             <span>Express.js</span>
             <span>REST APIs</span>
             <span>MongoDB</span>
-            <span>React.js</span>
           </div>
         </div>
 
